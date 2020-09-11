@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
 import {history, store} from './store'
 import {ConnectedRouter} from "connected-react-router";
+import Layout from "./components/layout";
 
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
             <ConnectedRouter history={history}>
-                <App/>
+                <Layout/>
             </ConnectedRouter>
         </Provider>
     </React.StrictMode>,
